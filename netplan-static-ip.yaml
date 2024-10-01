@@ -1,0 +1,14 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0:  # Replace eth0 with your actual network interface name
+      dhcp4: no
+      dhcp6: no
+      addresses:
+        - 10.135.5.134/8
+      gateway4: 10.0.0.1  # Replace with your actual gateway if different
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
