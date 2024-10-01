@@ -7,7 +7,10 @@ network:
       dhcp6: no
       addresses:
         - 10.135.5.134/8
-      gateway4: 10.0.0.1  # Replace with your actual gateway if different
+      routes:
+        - to: 0.0.0.0/0
+          via: 10.135.0.3
+          on-link: true
       nameservers:
         addresses:
           - 8.8.8.8
